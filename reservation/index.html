@@ -49,7 +49,7 @@
                             <option value="11">Novembre</option>
                             <option value="12">Décembre</option>
                         </select>
-                        <input type="number" id="annee-arrivee" name="annee-arrivee" min="1900" max="2099"
+                        <input type="number" id="annee-arrivee" name="annee-arrivee" min="2023" max="2099"
                             placeholder="AAAA" required>
                     </p>
                     <p>
@@ -71,7 +71,7 @@
                             <option value="11">Novembre</option>
                             <option value="12">Décembre</option>
                         </select>
-                        <input type="number" id="annee-depart" name="annee-depart" min="1900" max="2099"
+                        <input type="number" id="annee-depart" name="annee-depart" min="2023" max="2099"
                             placeholder="AAAA" required>
                     </p>
                     <p>
@@ -88,11 +88,11 @@
                     </legend>
                     <p>
                         <label for="adultes">Adultes (maximum 4):</label>
-                        <input min="0" max="4" type="number" id="champ-adultes" name="adultes">
+                        <input min="1" max="4" type="number" id="champ-adultes" name="adultes" required>
                     </p>
                     <p>
                         <label for="enfants">Enfants (maximum 5):</label>
-                        <input min="0" max="5" type="number" id="champ-enfants" name="enfants">
+                        <input min="0" max="5" type="number" id="champ-enfants" name="enfants" required>
                     </p>
                     <p>
                         Notes: <br>
@@ -107,7 +107,8 @@
                     <legend>
                         <h2>3. Choix chambre et forfait</h2>
                     </legend>
-
+                    <!-- Dans le cas des boutons radios, il suffit de mettre l’attribut required
+                    sur le premier bouton radio du groupe. -->
                     <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
                 Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
 
@@ -125,19 +126,21 @@
                     </legend>
                     <p>
                         <label for="prenom">Prénom :</label>
-                        <input type="text" id="champ-prenom" name="prenom">
+                        <input type="text" id="champ-prenom" name="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" required
+                            minlength="3">
                     </p>
                     <p>
                         <label for="nom">Nom :</label>
-                        <input type="text" id="champ-nom" name="nom">
+                        <input type="text" id="champ-nom" name="nom" pattern="[a-zA-ZÀ-ÿ \-]+" required minlength="2">
                     </p>
                     <p>
                         <label for="email">Email :</label>
-                        <input type="email" id="champ-email" name="email">
+                        <input type="email" id="champ-email" name="email" pattern="[a-zA-ZÀ-ÿ \-]+" required>
                     </p>
                     <p>
                         <label for="telephone">Téléphone :</label>
-                        <input type="tel" id="champ-telephone" name="telephone">
+                        <input type="tel" id="champ-telephone" name="telephone" placeholder="(xxx) xxx-xxxx" required
+                            maxlength=" 10">
                     </p>
             </div>
 
