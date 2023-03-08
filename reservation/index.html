@@ -23,65 +23,87 @@
     <main>
         <h1 class="">Réservation</h1>
         <form id="reservation-form" action="reservation.html">
-            <div class="form-section">
-
-                <fieldset class="form_fieldset">
-                    <legend>
-                        <h2>1. Vérifier la disponibilité</h2>
-                    </legend>
-                    <div class="ctnValidation">
-                        <p>
-                            <label for="date-arrivee">Date d'arrivée :</label>
-                            <!-- le type "date" a possiblement des probleme d'a11y -->
-                            <input type="number" id="jour-arrivee" name="jour-arrivee" min="1" max="31" placeholder="JJ"
-                                required>
-                            <select id="mois-arrivee" name="mois-arrivee" required>
-                                <option value="">Mois</option>
-                                <option value="01">Janvier</option>
-                                <option value="02">Février</option>
-                                <option value="03">Mars</option>
-                                <option value="04">Avril</option>
-                                <option value="05">Mai</option>
-                                <option value="06">Juin</option>
-                                <option value="07">Juillet</option>
-                                <option value="08">Août</option>
-                                <option value="09">Septembre</option>
-                                <option value="10">Octobre</option>
-                                <option value="11">Novembre</option>
-                                <option value="12">Décembre</option>
-                            </select>
-                            <input type="number" id="annee-arrivee" name="annee-arrivee" min="2023" max="2099"
-                                placeholder="AAAA" required>
-                        </p>
-                        <p>
-                            <label for="date-depart">Date de départ :</label>
-                            <input type="number" id="jour-depart" name="jour-depart" min="1" max="31" placeholder="JJ"
-                                required>
-                            <select id="mois-depart" name="mois-depart" required>
-                                <option value="">Mois</option>
-                                <option value="01">Janvier</option>
-                                <option value="02">Février</option>
-                                <option value="03">Mars</option>
-                                <option value="04">Avril</option>
-                                <option value="05">Mai</option>
-                                <option value="06">Juin</option>
-                                <option value="07">Juillet</option>
-                                <option value="08">Août</option>
-                                <option value="09">Septembre</option>
-                                <option value="10">Octobre</option>
-                                <option value="11">Novembre</option>
-                                <option value="12">Décembre</option>
-                            </select>
-                            <input type="number" id="annee-depart" name="annee-depart" min="2023" max="2099"
-                                placeholder="AAAA" required>
-                        </p>
-                        <p>
-                            <button type="button" aria-label="Vérifier la disponibilité"
-                                id="check-availability-button">Vérifier la disponibilité</button>
-                        <p id="availability-message"></p>
-                        </p>
-                    </div>
-                </fieldset>
+            <fieldset>
+                <legend>
+                    <h2>1. Vérifier la disponibilité</h2>
+                </legend>
+                <div class="form-section">
+                    <p>
+                        <label for="jour-arrivee">Date d'arrivée :</label>
+                        <input type="number" id="jour-arrivee" name="jour-arrivee" min="1" max="31" placeholder="JJ"
+                            required>
+                        <label for="mois-arrivee">Mois :</label>
+                        <select id="mois-arrivee" name="mois-arrivee" required>
+                            <option value="">Mois</option>
+                            <option value="01">Janvier</option>
+                            <option value="02">Février</option>
+                            <option value="03">Mars</option>
+                            <option value="04">Avril</option>
+                            <option value="05">Mai</option>
+                            <option value="06">Juin</option>
+                            <option value="07">Juillet</option>
+                            <option value="08">Août</option>
+                            <option value="09">Septembre</option>
+                            <option value="10">Octobre</option>
+                            <option value="11">Novembre</option>
+                            <option value="12">Décembre</option>
+                        </select>
+                        <label for="annee-arrivee">Année :</label>
+                        <input type="number" id="annee-arrivee" name="annee-arrivee" min="2023" max="2099"
+                            placeholder="AAAA" required>
+                    </p>
+                    <p>
+                        <label for="jour-depart">Date de départ :</label>
+                        <input type="number" id="jour-depart" name="jour-depart" min="1" max="31" placeholder="JJ"
+                            required>
+                        <label for="mois-depart">Mois :</label>
+                        <select id="mois-depart" name="mois-depart" required>
+                            <option value="">Mois</option>
+                            <option value="01">Janvier</option>
+                            <option value="02">Février</option>
+                            <option value="03">Mars</option>
+                            <option value="04">Avril</option>
+                            <option value="05">Mai</option>
+                            <option value="06">Juin</option>
+                            <option value="07">Juillet</option>
+                            <option value="08">Août</option>
+                            <option value="09">Septembre</option>
+                            <option value="10">Octobre</option>
+                            <option value="11">Novembre</option>
+                            <option value="12">Décembre</option>
+                        </select>
+                        <input type="number" id="annee-arrivee" name="annee-arrivee" min="2023" max="2099"
+                            placeholder="AAAA" required>
+                    </p>
+                    <p>
+                        <label for="date-depart">Date de départ :</label>
+                        <input type="number" id="jour-depart" name="jour-depart" min="1" max="31" placeholder="JJ"
+                            required>
+                        <select id="mois-depart" name="mois-depart" required>
+                            <option value="">Mois</option>
+                            <option value="01">Janvier</option>
+                            <option value="02">Février</option>
+                            <option value="03">Mars</option>
+                            <option value="04">Avril</option>
+                            <option value="05">Mai</option>
+                            <option value="06">Juin</option>
+                            <option value="07">Juillet</option>
+                            <option value="08">Août</option>
+                            <option value="09">Septembre</option>
+                            <option value="10">Octobre</option>
+                            <option value="11">Novembre</option>
+                            <option value="12">Décembre</option>
+                        </select>
+                        <input type="number" id="annee-depart" name="annee-depart" min="2023" max="2099"
+                            placeholder="AAAA" required>
+                    </p>
+                    <p>
+                        <button type="button" aria-label="Vérifier la disponibilité"
+                            id="check-availability-button">Vérifier la disponibilité</button>
+                    <p id="availability-message"></p>
+                    </p>
+                </div>
+            </fieldset>
             </div>
 
             <div class="form-section">
@@ -122,7 +144,7 @@
                                 <label class="type-de-chambre-label" for="types-de-chambre-1">
                                     <picture>
                                         <source srcset="../images/types-de-chambre/1-lit-simple.webp" type="image/webp">
-                                        <img class="img-chambre" src="../images/types-de-chambre/1-lit-simple.webp"
+                                        <img class="img-chambre" src="../images/types-de-chambre/1-lit-double.webp"
                                             alt="Chambre simple">
                                     </picture>
                                     <span class="span-img-chambre">Chambre simple</span>
