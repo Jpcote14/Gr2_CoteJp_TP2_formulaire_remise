@@ -29,11 +29,6 @@ html {
   box-sizing: inherit;
 }
 
-/* Images fluides */
-img {
-  max-width: 100%;
-}
-
 /*** Styles de base ***/
 abbr[title] {
   text-decoration: none;

@@ -12,120 +12,127 @@
 
 <body>
     <header>
-        <a href="../index.html">
-            <p><img src="../images/logo-jacana.png" alt=""></p>
-            <p class="titre">Auberge du jacana africain</p>
-        </a>
+        <div class="header-img-titre">
+            <a href="../index.html">
+                <p class="section-img-header"><img class="img-header" src="../images/logo-jacana.png" alt=""></p>
+                <p class="titre"><span class="auberge">Auberge</span>
+                    <span class="du">du</span>
+                    <span class="jacana-africain">jacana africain</span>
+                </p>
+            </a>
+        </div>
+
         <!-- Ajouter un menu : Accueil, Historique, Région, Contact, Réservation -->
-        <p> <a href="../index.html">accueil</a> | <a href="index.html">réservation</a>
+        <nav>
+            <a href="../index.html">accueil</a> | <a href="index.html">réservation</a>
+        </nav>
     </header>
 
     <main>
-        <h1 class="">Réservation</h1>
-        <form id="reservation-form" action="reservation.html">
-            <fieldset>
-                <legend>
-                    <h2>1. Vérifier la disponibilité</h2>
-                </legend>
-                <div class="form-section">
-                    <p>
-                        <label for="jour-arrivee">Date d'arrivée :</label>
-                        <input type="number" id="jour-arrivee" name="jour-arrivee" min="1" max="31" placeholder="JJ"
-                            required>
-                        <label for="mois-arrivee">Mois :</label>
-                        <select id="mois-arrivee" name="mois-arrivee" required>
-                            <option value="">Mois</option>
-                            <option value="01">Janvier</option>
-                            <option value="02">Février</option>
-                            <option value="03">Mars</option>
-                            <option value="04">Avril</option>
-                            <option value="05">Mai</option>
-                            <option value="06">Juin</option>
-                            <option value="07">Juillet</option>
-                            <option value="08">Août</option>
-                            <option value="09">Septembre</option>
-                            <option value="10">Octobre</option>
-                            <option value="11">Novembre</option>
-                            <option value="12">Décembre</option>
-                        </select>
-                        <label for="annee-arrivee">Année :</label>
-                        <input type="number" id="annee-arrivee" name="annee-arrivee" min="2023" max="2099"
-                            placeholder="AAAA" required>
-                    </p>
-                    <p>
-                        <label for="jour-depart">Date de départ :</label>
-                        <input type="number" id="jour-depart" name="jour-depart" min="1" max="31" placeholder="JJ"
-                            required>
-                        <label for="mois-depart">Mois :</label>
-                        <select id="mois-depart" name="mois-depart" required>
-                            <option value="">Mois</option>
-                            <option value="01">Janvier</option>
-                            <option value="02">Février</option>
-                            <option value="03">Mars</option>
-                            <option value="04">Avril</option>
-                            <option value="05">Mai</option>
-                            <option value="06">Juin</option>
-                            <option value="07">Juillet</option>
-                            <option value="08">Août</option>
-                            <option value="09">Septembre</option>
-                            <option value="10">Octobre</option>
-                            <option value="11">Novembre</option>
-                            <option value="12">Décembre</option>
-                        </select>
-                        <input type="number" id="annee-arrivee" name="annee-arrivee" min="2023" max="2099"
-                            placeholder="AAAA" required>
-                    </p>
-                    <p>
-                        <label for="date-depart">Date de départ :</label>
-                        <input type="number" id="jour-depart" name="jour-depart" min="1" max="31" placeholder="JJ"
-                            required>
-                        <select id="mois-depart" name="mois-depart" required>
-                            <option value="">Mois</option>
-                            <option value="01">Janvier</option>
-                            <option value="02">Février</option>
-                            <option value="03">Mars</option>
-                            <option value="04">Avril</option>
-                            <option value="05">Mai</option>
-                            <option value="06">Juin</option>
-                            <option value="07">Juillet</option>
-                            <option value="08">Août</option>
-                            <option value="09">Septembre</option>
-                            <option value="10">Octobre</option>
-                            <option value="11">Novembre</option>
-                            <option value="12">Décembre</option>
-                        </select>
-                        <input type="number" id="annee-depart" name="annee-depart" min="2023" max="2099"
-                            placeholder="AAAA" required>
-                    </p>
-                    <p>
-                        <button type="button" aria-label="Vérifier la disponibilité"
-                            id="check-availability-button">Vérifier la disponibilité</button>
-                    <p id="availability-message"></p>
-                    </p>
-                </div>
-            </fieldset>
+        <form>
+            <h1 class="">Réservation</h1>
+            <div id="reservation-form" action="reservation.html">
+                <fieldset class="form_fieldset">
+                    <legend>
+                        <h2>1. Vérifier la disponibilité</h2>
+                    </legend>
+                    <div class="form-section">
+                        <div class="section-arrivee">
+                            <p class="conteneur">
+                                <label class="label-jour" for="jour-arrivee">Date d'arrivée :</label>
+                                <input class="input-jour" type="number" id="jour-arrivee" name="jour-arrivee" min="1"
+                                    max="31" maxlength="2" placeholder="JJ" required>
+                            </p>
+                            <p class="conteneur">
+                                <label class="label-mois" for="mois-arrivee">Mois :</label>
+                                <select class="input-mois" id="mois-arrivee" name="mois-arrivee" required>
+                                    <option value="">Mois</option>
+                                    <option value="01">Janvier</option>
+                                    <option value="02">Février</option>
+                                    <option value="03">Mars</option>
+                                    <option value="04">Avril</option>
+                                    <option value="05">Mai</option>
+                                    <option value="06">Juin</option>
+                                    <option value="07">Juillet</option>
+                                    <option value="08">Août</option>
+                                    <option value="09">Septembre</option>
+                                    <option value="10">Octobre</option>
+                                    <option value="11">Novembre</option>
+                                    <option value="12">Décembre</option>
+                                </select>
+                            </p>
+                            <p class="conteneur">
+                                <label class="label-annee" for="annee-arrivee">Année :</label>
+                                <input class="input-annee" type="number" id="annee-arrivee" name="annee-arrivee"
+                                    min="2023" max="2099" maxlength="4" placeholder="AAAA" required>
+                            </p>
+                        </div>
+                        <div class="section-depart">
+                            <p class="conteneur">
+                                <label class="label-jour" for="date-depart">Date de départ :</label>
+                                <input class="input-jour" type="number" id="jour-depart" name="jour-depart" min="1"
+                                    max="31" placeholder="JJ" maxlength="2" required>
+                            </p>
+                            <p class="conteneur">
+                                <label class="label-mois" for="mois-depart">Mois :</label>
+                                <select class="input-mois" id="mois-depart" name="mois-depart" required>
+                                    <option value="">Mois</option>
+                                    <option value="01">Janvier</option>
+                                    <option value="02">Février</option>
+                                    <option value="03">Mars</option>
+                                    <option value="04">Avril</option>
+                                    <option value="05">Mai</option>
+                                    <option value="06">Juin</option>
+                                    <option value="07">Juillet</option>
+                                    <option value="08">Août</option>
+                                    <option value="09">Septembre</option>
+                                    <option value="10">Octobre</option>
+                                    <option value="11">Novembre</option>
+                                    <option value="12">Décembre</option>
+                                </select>
+                            </p>
+                            <p class="conteneur">
+                                <label class="label-annee" for="annee-depart">Année :</label>
+                                <input class="input-annee" type="number" id="annee-depart" name="annee-depart"
+                                    min="2023" max="2099" placeholder="AAAA" maxlength="4" required>
+                            </p>
+                        </div>
+                        <p class="conteneur">
+                            <button class="button" type="button" aria-label="Vérifier la disponibilité"
+                                id="check-availability-button">Vérifier la disponibilité</button>
+                        <p class="cacher" id="availability-message"></p>
+                        </p>
+                    </div>
+                </fieldset>
             </div>
-
             <div class="form-section">
                 <fieldset class="form_fieldset">
                     <legend>
                         <h2>2. Nombre de personnes</h2>
                     </legend>
                     <div class="ctnValidation">
-                        <p>
-                            <label for="adultes">Adultes (maximum 4):</label>
-                            <input min="1" max="4" type="number" id="champ-adultes" name="adultes" required>
+
+                        <p class="conteneur">
+                            <label for="adultes">Adultes : </label>
+                            <input min="1" max="4" maxlength="1" type="number" id="champ-adultes" name="adultes"
+                                required>
                         </p>
-                        <p>
-                            <label for="enfants">Enfants (maximum 5):</label>
-                            <input min="0" max="5" type="number" id="champ-enfants" name="enfants" required>
+
+
+                        <p class="conteneur">
+                            <label for="enfants">Enfants :</label>
+                            <input min="0" max="5" maxlength="1" type="number" id="champ-enfants" name="enfants"
+                                required>
                         </p>
-                        <p>
-                            Notes: <br>
-                            1. la chambre familiale peut loger jusqu'à 6 personnes<br>
-                            2. si vous avez besoin de louer plusieurs chambres, <a href="">contactez-nous
-                                directement</a>
-                        </p>
+
+                        <div class="note">
+                            <p class="texte-note">Notes:</p>
+                            <p class="texte">1. La chambre familiale peut loger jusqu'à 6 personnes</p>
+                            <p class="texte">2. Si vous avez besoin de louer plusieurs chambres, <a href="">
+                                    contactez-nous
+                                    directement</a></p>
+                            <p class="texte">3. Vous pouvez avoir un maximum de 4 adultes et 5 enfants</p>
+                        </div>
                     </div>
                 </fieldset>
             </div>
@@ -136,7 +143,6 @@
                         <h2>3. Choix chambre et forfait</h2>
                     </legend>
                     <div class="ctnValidation">
-                        <p>
                         <ul class="type-de-chambre-conteneur">
                             <li class="type-de-chambre-item">
                                 <input class="visuallyhidden screen-reader-only" type="radio" id="types-de-chambre-1"
@@ -147,7 +153,10 @@
                                         <img class="img-chambre" src="../images/types-de-chambre/1-lit-double.webp"
                                             alt="Chambre simple">
                                     </picture>
-                                    <span class="span-img-chambre">Chambre simple</span>
+                                    <div class="info-chambre">
+                                        <span class="span-img-chambre">Chambre simple</span>
+                                        <span class="span-img-chambre">100$</span>
+                                    </div>
                                 </label>
                             </li>
                             <li class="type-de-chambre-item">
@@ -159,7 +168,10 @@
                                         <img class="img-chambre" src="../images/types-de-chambre/2-lits-double.jpg"
                                             alt="Chambre double">
                                     </picture>
-                                    <span>Chambre double</span>
+                                    <div class="info-chambre">
+                                        <span class="span-img-chambre">Chambre Double</span>
+                                        <span class="span-img-chambre">150$</span>
+                                    </div>
                                 </label>
                             </li>
                             <li class="type-de-chambre-item">
@@ -172,14 +184,18 @@
                                         <img class="img-chambre" src="../images/types-de-chambre/chambre-familiale.jpg"
                                             alt="Chambre familiale">
                                     </picture>
-                                    <span>Chambre familiale</span>
+                                    <div class="info-chambre">
+                                        <span class="span-img-chambre">Chambre familiale</span>
+                                        <span class="span-img-chambre">200$</span>
+                                    </div>
                                 </label>
                             </li>
                             </p>
                         </ul>
                     </div>
+
                     <div class="ctnValidation">
-                        <p>
+                        <p class="conteneur">
                             <label>
                                 <input type="checkbox" name="petit_dejeuner" value="inclure">
                                 Inclure le petit déjeuner s'il-vous-plaît
@@ -191,10 +207,10 @@
                             c'est
                             12.50$ CAN.
                         </p>
-                        <p class="erreur">
+                        <p class="erreur cacher">
                             <span>
                                 <span class="screen-reader-only">Avertissement</span>
-                                <span class="icone icone--artissement" aria-hidden="true"></span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
                         </p>
                     </div>
@@ -207,21 +223,23 @@
                             <h2>4. Identification</h2>
                         </legend>
                         <div class="rangee">
-                            <p>
+                            <p class="conteneur">
                                 <label for="prenom">Prénom :</label>
                                 <input type="text" id="champ-prenom" name="prenom" placeholder="Entrez votre prénom"
                                     pattern="[a-zA-ZÀ-ÿ \-]+" required minlength="3">
-                                <span class="hint">Veuillez entrer votre prenom, sans caractères spéciaux ou
+                                <span class="hint visuallyhidden">Veuillez entrer votre prenom, sans caractères spéciaux
+                                    ou
                                     chiffres.</span>
                             </p>
-                            <p>
+                            <p class="conteneur">
                                 <label for="nom">Nom :</label>
                                 <input type="text" id="champ-nom" name="nom" placeholder="Entrez votre nom"
                                     pattern="[a-zA-ZÀ-ÿ \-]+" required minlength="2">
-                                <span class="hint">Veuillez entrer votre prenom, sans caractères spéciaux ou
+                                <span class="hint visuallyhidden">Veuillez entrer votre prenom, sans caractères spéciaux
+                                    ou
                                     chiffres.</span>
                             </p>
-                            <p class="erreur">
+                            <p class="erreur cacher">
                                 <span>
                                     <span class="screen-reader-only">Avertissement</span>
                                     <span class="icone icone--artissement" aria-hidden="true"></span>
@@ -230,38 +248,39 @@
                             </p>
                         </div>
                         <div class="ctnValidation">
-                            <p>
+                            <p class="conteneur">
                                 <label for="email">Email :</label>
                                 <input type="email" id="champ-email" name="email"
                                     placeholder="Entrez votre adresse courriel" pattern="[a-zA-ZÀ-ÿ \-]+" required>
-                                <span class="hint">Veuillez entrer votre prenom, sans caractères spéciaux ou
+                                <span class="hint visuallyhidden">Veuillez entrer votre prenom, sans caractères spéciaux
+                                    ou
                                     chiffres.</span>
                             </p>
-                            <p class="erreur">
+                            <p class="erreur cacher">
                                 <span>
                                     <span class="screen-reader-only">Avertissement</span>
                                     <span class="icone icone--artissement" aria-hidden="true"></span>
                                 </span>
-
                             </p>
                         </div>
                         <div class="ctnValidation">
-                            <p>
+                            <p class="conteneur">
                                 <label for="telephone">Téléphone :</label>
                                 <input type="tel" id="champ-telephone" name="telephone" placeholder="(xxx) xxx-xxxx"
                                     required maxlength=" 10">
                             </p>
-                            <p class="erreur">
+                            <p class="erreur cacher">
                                 <span>
                                     <span class="screen-reader-only">Avertissement</span>
                                     <span class="icone icone--avertissement" aria-hidden="true"></span>
                                 </span>
-
                             </p>
                         </div>
+                    </fieldset>
                 </div>
 
-                <p><button type="submit">Confirmer la réservation</button></p>
+
+                <button class="button btnSummit" type="submit">Confirmer la réservation</button>
         </form>
     </main>
     <hr>
@@ -281,7 +300,7 @@
         <!-- Intégrer les medias sociaux instagram et facebook + un bouton pour partager cette page -->
         <p>
             Ce site Web est un projet pédagogique réalisé par
-            <a href="">Prénom et Nom</a> et <a href="">Prénom et Nom</a> dans le cadre du cours 582-204-SF Intégration
+            <a href="">Jean-Philippe Côté</a> dans le cadre du cours 582-204-SF Intégration
             II,
             programme des <a href="">Techniques d'intégration multimédia</a>,
             <a href="">Cégep de Sainte-Foy</a>.

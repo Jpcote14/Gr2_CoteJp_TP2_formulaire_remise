@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
 /**
  * @author COLLECTIF - @TIMCSF
  *
@@ -34,22 +35,232 @@
 
 * {
   text-decoration: none;
+  font-family: "Poppins";
 }
 
 /* base */
+
+.cacher {
+  display: none;
+}
+
+a {
+  color: goldenrod;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
 }
 
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+  color: white;
+  background-color: #1f2029;
+}
+
+.button {
+  width: 200px;
+  border-radius: 4px;
+  margin: 50px auto 30px auto;
+  height: 60px;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+  display: inline-flex;
+  border: none;
+  background-color: #ffeba7;
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
+}
+
+@media (min-width: 779px) {
+  .button {
+    margin: 20px 0 0 0;
+    align-content: flex-start;
+  }
+
+  .btnSummit {
+    margin: 30px 0 30px 2%;
+  }
+}
+
+.button:active,
+.button:focus {
+  background-color: #102770;
+  color: #dab026;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+}
+.button:hover {
+  background-color: #102770;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+}
+
+/* a corriger */
+h3 {
+  font-size: 14px;
+}
+
+/* header */
+header {
+  width: 100%;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.section-img-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-header {
+  width: 250px;
+}
+
+.header-img-titre {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titre {
+  text-align: center;
+  font-size: 32px;
+  color: goldenrod;
+}
+
+form {
+  max-width: 100%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
+  background-color: #2a2b38;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 780px) {
+  form {
+    width: 40%;
+    margin: auto;
+  }
+}
+
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form_fieldset {
+  min-width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+
+  border: solid 1px #ccc;
+  border-radius: 20px;
+}
+
+@media (min-width: 780px) {
+  .form_fieldset {
+    width: 30%;
+    margin: auto;
+  }
+}
+
+legend {
+  font-size: 1.25px;
+  padding: 0 0.25em;
+  color: #999;
+}
+
+.section-depart {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+@media (max-width: 779px) {
+  h1 {
+    margin: 30px auto 30px auto;
+  }
+}
+
+@media (min-width: 780px) {
+  h1 {
+    width: 98%;
+    margin-left: 2%;
+  }
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.maximum-personne {
+  color: rgb(142, 141, 141);
+}
+.conteneur {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.note {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* section chambre */
+
+input[type="radio"]:hover + label {
+  background-color: rgb(214, 81, 81);
+}
+
 input[type="radio"]:checked + label {
-  border: green solid 6px;
+  background-color: rgb(214, 81, 81);
+}
+
+input,
+select {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
 .type-de-chambre-conteneur {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
 }
 
@@ -62,11 +273,17 @@ input[type="radio"]:checked + label {
 .type-de-chambre-label {
   display: flex;
   flex-direction: column;
+  padding: 10px 10px 30px 10px;
 }
 
 .img-chambre {
-  width: 200px;
+  width: 100%;
 }
 
-.span-img-chambre {
+hr {
+  margin-top: 30px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgb(218, 165, 32, 1), rgba(175, 99, 51, 0.75), rgba(91, 35, 35, 0.5));
+  box-shadow: goldenrod 0 0 11px 1px;
 }
