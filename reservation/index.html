@@ -21,22 +21,20 @@
                 </p>
             </a>
         </div>
-
         <!-- Ajouter un menu : Accueil, Historique, Région, Contact, Réservation -->
         <nav>
             <a href="../index.html">accueil</a> | <a href="index.html">réservation</a>
         </nav>
     </header>
-
     <main>
-        <form>
+        <form action="reservation.html">
             <h1 class="">Réservation</h1>
-            <div id="reservation-form" action="reservation.html">
+            <div id="reservation-form">
                 <fieldset class="form_fieldset">
                     <legend>
                         <h2>1. Vérifier la disponibilité</h2>
                     </legend>
-                    <div class="form-section">
+                    <div class="form-section form-section_row">
                         <div class="section-arrivee">
                             <p class="conteneur">
                                 <label class="label-jour" for="jour-arrivee">Date d'arrivée :</label>
@@ -98,7 +96,7 @@
                             </p>
                         </div>
                         <p class="conteneur">
-                            <button class="button" type="button" aria-label="Vérifier la disponibilité"
+                            <button class="button bouton-verifie" type="button" aria-label="Vérifier la disponibilité"
                                 id="check-availability-button">Vérifier la disponibilité</button>
                         <p class="cacher" id="availability-message"></p>
                         </p>
@@ -111,20 +109,16 @@
                         <h2>2. Nombre de personnes</h2>
                     </legend>
                     <div class="ctnValidation">
-
                         <p class="conteneur">
                             <label for="adultes">Adultes : </label>
                             <input min="1" max="4" maxlength="1" type="number" id="champ-adultes" name="adultes"
                                 required>
                         </p>
-
-
                         <p class="conteneur">
                             <label for="enfants">Enfants :</label>
                             <input min="0" max="5" maxlength="1" type="number" id="champ-enfants" name="enfants"
                                 required>
                         </p>
-
                         <div class="note">
                             <p class="texte-note">Notes:</p>
                             <p class="texte">1. La chambre familiale peut loger jusqu'à 6 personnes</p>
@@ -136,7 +130,6 @@
                     </div>
                 </fieldset>
             </div>
-
             <div class="form-section">
                 <fieldset class="form_fieldset">
                     <legend>
@@ -193,7 +186,6 @@
                             </p>
                         </ul>
                     </div>
-
                     <div class="ctnValidation">
                         <p class="conteneur">
                             <label>
@@ -201,13 +193,12 @@
                                 Inclure le petit déjeuner s'il-vous-plaît
                             </label>
                         </p>
-
                         <p>
                             *Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans
                             c'est
                             12.50$ CAN.
                         </p>
-                        <p class="erreur cacher">
+                        <p class="erreur">
                             <span>
                                 <span class="screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
@@ -215,8 +206,6 @@
                         </p>
                     </div>
                 </fieldset>
-
-
                 <div class="form-section">
                     <fieldset class="form_fieldset">
                         <legend>
@@ -227,7 +216,10 @@
                                 <label for="prenom">Prénom :</label>
                                 <input type="text" id="champ-prenom" name="prenom" placeholder="Entrez votre prénom"
                                     pattern="[a-zA-ZÀ-ÿ \-]+" required minlength="3">
-                                <span class="hint visuallyhidden">Veuillez entrer votre prenom, sans caractères spéciaux
+                                <!-- ici le span avec la classe erreur devrait avoir la classe cacher, 
+                        mais je ne lai pas mis pour odnne run exemple d'erreur surl e formulaire -->
+                                <span class="erreur hint">Veuillez entrer votre prenom, sans caractères
+                                    spéciaux
                                     ou
                                     chiffres.</span>
                             </p>
@@ -242,9 +234,8 @@
                             <p class="erreur cacher">
                                 <span>
                                     <span class="screen-reader-only">Avertissement</span>
-                                    <span class="icone icone--artissement" aria-hidden="true"></span>
+                                    <span class="icone icone--avertissement" aria-hidden="true"></span>
                                 </span>
-
                             </p>
                         </div>
                         <div class="ctnValidation">
@@ -259,7 +250,7 @@
                             <p class="erreur cacher">
                                 <span>
                                     <span class="screen-reader-only">Avertissement</span>
-                                    <span class="icone icone--artissement" aria-hidden="true"></span>
+                                    <span class="icone icone--avertissement" aria-hidden="true"></span>
                                 </span>
                             </p>
                         </div>
@@ -279,7 +270,6 @@
                     </fieldset>
                 </div>
 
-
                 <button class="button btnSummit" type="submit">Confirmer la réservation</button>
         </form>
     </main>
@@ -293,7 +283,6 @@
             Si vous préférez, vous pouvez nous contacter par courriel.
             Afin d’assurer un suivi rapide et efficace, veuillez préciser le chalet désiré, les périodes visées ainsi
             que le nombre de personnes (adultes et enfants) qui y séjourneront.
-
         </p>
     </aside>
     <footer>
